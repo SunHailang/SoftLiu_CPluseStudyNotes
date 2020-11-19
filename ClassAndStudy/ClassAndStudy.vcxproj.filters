@@ -27,6 +27,12 @@
     <ClCompile Include="Build.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
+    <ClCompile Include="Vector3.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MyInteger.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Student.h">
@@ -36,6 +42,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Build.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MyInteger.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
