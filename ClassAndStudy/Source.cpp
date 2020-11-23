@@ -7,6 +7,8 @@ using namespace std;
 #include "Build.h"
 #include "Vector3.h"
 #include "MyInteger.h"
+#include "Person.h"
+#include "MyPrint.h"
 
 #define PI 3.14
 
@@ -30,7 +32,6 @@ public:
 
 int main()
 {
-
 	// 通过圆类 创建一个圆的对象
 	//Circle c1;
 	// 给圆对象赋值
@@ -52,14 +53,32 @@ int main()
 	//Vector3 v3 = v1 + v2;
 	//cout << v3 << endl;
 
-	MyInteger num = MyInteger(10);
+	//MyInteger num = MyInteger(10);
 
-	cout << (++num)++ << endl;
-	cout << num << endl;
+	//cout << (++num)++ << endl;
+	//cout << num << endl;
 
-	MyInteger num1 = num++;
-	cout << num1 << endl;
-	cout << num1 << endl;
+	//MyInteger num1 = num++;
+	//cout << num1 << endl;
+	//cout << num1 << endl;
+
+	// 关系运算符重载  = , == , != 
+	//Person p1 = Person("Tom", 18);
+	//Person p2 = Person("Jack", 20);
+	//Person p3 = Person("Jame", 30);
+	////p2 = p1 = p3;
+	//bool yes = p1 == p2;
+	//cout << (yes == true ? "Yes" : "No") << endl;
+
+	// 函数调用运算符重载
+	MyPrint print;
+	// 由于调用起来非常像一个函数调用， 所以被称为仿函数
+	print("Hello world.");
+	// 仿函数非常灵活
+	cout << print(100, 100) << endl;
+
+	// 匿名函数对象
+	cout << MyPrint()(100, 100) << endl;
 
 	system("pause");
 	return 0;

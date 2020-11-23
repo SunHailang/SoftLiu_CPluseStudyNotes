@@ -113,6 +113,8 @@
     <ClCompile Include="Build.cpp" />
     <ClCompile Include="GoodGay.cpp" />
     <ClCompile Include="MyInteger.cpp" />
+    <ClCompile Include="MyPrint.cpp" />
+    <ClCompile Include="Person.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="Student.cpp" />
     <ClCompile Include="Vector3.cpp" />
@@ -121,6 +123,8 @@
     <ClInclude Include="Build.h" />
     <ClInclude Include="GoodGay.h" />
     <ClInclude Include="MyInteger.h" />
+    <ClInclude Include="MyPrint.h" />
+    <ClInclude Include="Person.h" />
     <ClInclude Include="Student.h" />
     <ClInclude Include="Vector3.h" />
   </ItemGroup>
