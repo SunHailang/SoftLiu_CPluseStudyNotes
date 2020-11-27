@@ -4,10 +4,9 @@
 #include<fstream>
 #include<vector>
 #include "BossEmployee.h"
-#include "Options.h"
 using namespace std;
 
-#define FilePath "";
+#define FilePath "localSave.save"
 
 
 class EmployeeManager
@@ -18,16 +17,26 @@ public:
 	
 
 	void PrintUI();
-	void AddStaffInformation(StaffInfo * head);
-	void ShowStaffInfoMation(const StaffInfo * head);
+	void AddStaffInformation();
+	void ShowStaffInfomation();
 	void SortByID();
 	void ModifyStaffByID();
 
-	void DeleteStaffByID(StaffInfo * head);
+	void DeleteStaffByID();
+
+	void CleanStaffFile();
+
 	// 退出功能
 	bool Quit();
 
-	StaffInfo * ReadSave();
-	void WriteSave(const StaffInfo * head, const bool append);
+	void ReadSave();
+	void WriteSave(const bool append);
 
+private:
+	void AddStaffToArray(Employee * const employee);
+	int IsExistStaff(const int id);
+
+private:
+	int m_EmpNum;
+	Employee ** m_EmpArray;
 };

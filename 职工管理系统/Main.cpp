@@ -1,5 +1,4 @@
-﻿#include "Options.h"
-#include "EmployeeManager.h"
+﻿#include "EmployeeManager.h"
 #include<stdio.h>
 
 #ifdef _WIN32
@@ -23,7 +22,7 @@ int main()
 
 	EmployeeManager eManager;
 
-	struct StaffInfo * staffHead = eManager.ReadSave();
+	eManager.ReadSave();
 
 	bool quit = false;
 	while (!quit)
@@ -39,13 +38,13 @@ int main()
 			quit = eManager.Quit();
 			break;
 		case 1: // 增加职工信息
-			eManager.AddStaffInformation(staffHead);
+			eManager.AddStaffInformation();
 			break;
 		case 2: // 显示职工信息
-			eManager.ShowStaffInfoMation(staffHead);
+			eManager.ShowStaffInfomation();
 			break;
 		case 3: // 按照编号排序
-
+			eManager.SortByID();
 			break;
 
 		case 4:// 查找职工信息
@@ -55,10 +54,10 @@ int main()
 
 			break;
 		case 6:// 删除离职职工
-			eManager.DeleteStaffByID(staffHead);
+			eManager.DeleteStaffByID();
 			break;
 		case 7:// 清空所有文档
-
+			eManager.CleanStaffFile();
 			break;
 		default:
 			break;

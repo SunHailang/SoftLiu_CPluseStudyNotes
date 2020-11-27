@@ -19,8 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{250A610D-B6FC-462B-AB6F-FA8C94C5159F}</ProjectGuid>
-    <RootNamespace>职工管理系统</RootNamespace>
+    <ProjectGuid>{CC401EC3-CCB9-4BC6-9B16-E3A687602964}</ProjectGuid>
+    <RootNamespace>模板</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -81,7 +81,6 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -111,18 +110,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="BossEmployee.cpp" />
-    <ClCompile Include="Employee.cpp" />
-    <ClCompile Include="EmployeeManager.cpp" />
-    <ClCompile Include="Main.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="localSave.save" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="BossEmployee.h" />
-    <ClInclude Include="Employee.h" />
-    <ClInclude Include="EmployeeManager.h" />
+    <ClCompile Include="函数模板.cpp" />
+    <ClCompile Include="类模板.cpp" />
+    <ClCompile Include="类模板与函数模板的区别.cpp" />
+    <ClCompile Include="类模板中成员函数创建时机.cpp" />
+    <ClCompile Include="类模板对象做函数参数.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

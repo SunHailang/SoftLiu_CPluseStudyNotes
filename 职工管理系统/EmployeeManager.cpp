@@ -1,9 +1,10 @@
-#include "EmployeeManager.h"
+﻿#include "EmployeeManager.h"
 
 
 EmployeeManager::EmployeeManager()
 {
-
+	this->m_EmpNum = 0;
+	this->m_EmpArray = NULL;
 }
 void EmployeeManager::PrintUI()
 {
@@ -21,27 +22,25 @@ void EmployeeManager::PrintUI()
 	cout << "**************************************" << endl;
 }
 
-void EmployeeManager::AddStaffInformation(StaffInfo * head)
+void EmployeeManager::AddStaffInformation()
 {
 	int quit = 0;
 	while (quit == 0)
 	{
+		cout << "Input Func(1.Boos, 2.Manager, 3.Staff):";
+		int func = -1;
+		cin >> func;
 		cout << "Input ID:";
 		int id = -1;
 		cin >> id;
 		cout << "Input Name:";
 		char name[64] = { '\0' };
 		cin >> name;
-		while (head->next != NULL)
-		{
-			head = head->next;
-		}
-		struct StaffInfo * info = (struct StaffInfo*)malloc(sizeof(struct StaffInfo));
-		info->staff = new BossEmployee(id, name);
-		info->next = NULL;
-		head->next = info;
 
-		WriteSave(info, true);
+		Employee * employee = new BossEmployee(func, id, name);
+		AddStaffToArray(employee);
+
+		WriteSave(true);
 
 		cout << "0: Keep Add." << endl;
 		cout << "Any Key Quit." << endl;
@@ -50,25 +49,98 @@ void EmployeeManager::AddStaffInformation(StaffInfo * head)
 	}
 }
 
-void EmployeeManager::ShowStaffInfoMation(const StaffInfo * head)
+void EmployeeManager::AddStaffToArray(Employee * const employee)
 {
-	bool show = false;
-	while (head->next != NULL)
+
+	if (this->m_EmpArray == NULL || this->m_EmpNum >= sizeof(this->m_EmpArray) / sizeof(this->m_EmpArray[0]))
 	{
-		head = head->next;
-		head->staff->Work();
-		show = true;
+		int len = this->m_EmpNum * 2;
+		if (this->m_EmpArray == NULL)
+		{
+			len = 8;
+		}
+		Employee**work = this->m_EmpArray;
+		this->m_EmpArray = new Employee *[len];
+		for (int i = 0; i < this->m_EmpNum; i++)
+		{
+			this->m_EmpArray[i] = work[i];
+		}
 	}
-	if (!show)
+	this->m_EmpArray[this->m_EmpNum++] = employee;
+}
+
+int EmployeeManager::IsExistStaff(const int id)
+{
+	int index = -1;
+	for (int i = 0; i < this->m_EmpNum; i++)
+	{
+		Employee * employee = this->m_EmpArray[i];
+		if (*employee->m_ID == id)
+		{
+			index = i;
+			break;
+		}
+	}
+	return index;
+}
+
+void EmployeeManager::ShowStaffInfomation()
+{
+	if (this->m_EmpNum <= 0)
 	{
 		cout << "Not Any Staff." << endl;
+	}
+	else
+	{
+		for (int i = 0; i < this->m_EmpNum; i++)
+		{
+			this->m_EmpArray[i]->Work();
+		}
 	}
 	system("pause");
 }
 
 void EmployeeManager::SortByID()
 {
-
+	if (this->m_EmpNum <= 0)
+	{
+		cout << "Not Any Employee." << endl;
+		return;
+	}
+	cout << "Select Sort Options:" << endl;
+	cout << "1. Up Sort Options" << endl;
+	cout << "2. Down Sort Options" << endl;
+	cout << "Input Option:";
+	int option = -1;
+	cin >> option;
+	// 选择排序
+	for (int i = 0; i < this->m_EmpNum; i++)
+	{
+		int minOrMax = i;
+		for (int j = i + 1; j < this->m_EmpNum; j++)
+		{
+			if (option == 1) // up
+			{
+				if (this->m_EmpArray[minOrMax]->m_ID > this->m_EmpArray[j]->m_ID)
+				{
+					minOrMax = j;
+				}
+			}
+			else // down
+			{
+				if (this->m_EmpArray[minOrMax]->m_ID < this->m_EmpArray[j]->m_ID)
+				{
+					minOrMax = j;
+				}
+			}
+		}
+		if (i != minOrMax)
+		{
+			Employee * temp = this->m_EmpArray[i];
+			this->m_EmpArray[i] = this->m_EmpArray[minOrMax];
+			this->m_EmpArray[minOrMax] = temp;
+		}
+	}
 }
 
 
@@ -78,7 +150,7 @@ void EmployeeManager::ModifyStaffByID()
 
 }
 
-void EmployeeManager::DeleteStaffByID(StaffInfo * head)
+void EmployeeManager::DeleteStaffByID()
 {
 	bool quit = false;
 	bool isFirst = false;
@@ -87,31 +159,69 @@ void EmployeeManager::DeleteStaffByID(StaffInfo * head)
 		cout << "Input Delete Staff ID ('-1' quit):";
 		int id = -1;
 		cin >> id;
+
 		if (id != -1)
 		{
-			StaffInfo * header = head;
-			bool deleteSuccess = false;
-			while (header != NULL && header->next != NULL)
+			int index = IsExistStaff(id);
+			if (index != -1)
 			{
-				//head = head->next;
-				if (*header->next->staff->m_ID == id)
+				Employee * employee = this->m_EmpArray[index];
+				if (employee != NULL)
 				{
-					StaffInfo * deleteHeader = header->next;
-					header->next = header->next->next;
-					delete deleteHeader;
-					deleteSuccess = true;
+					delete employee;
+					employee = NULL;
 				}
-				header = header->next;
+				this->m_EmpNum--;
+				for (int i = index; i < this->m_EmpNum; i++)
+				{
+					this->m_EmpArray[i] = this->m_EmpArray[i + 1];
+				}
+				
+				WriteSave(false);
 			}
-			if (deleteSuccess)
+			else
 			{
-				WriteSave(head, false);
+				cout << "Staff is Not Exist." << endl;
 			}
 		}
 		else
 		{
 			quit = true;
 		}
+	}
+}
+
+void EmployeeManager::CleanStaffFile()
+{
+	cout << "0. Sure Clean" << endl;
+	cout << "1. Cancel Clean" << endl;
+	cout << "Input Options:";
+	int option = -1;
+	cin >> option;
+	if (option == 0)
+	{
+		// 打开模式 ios::trunc  如果文件存在则删除并重新创建
+		ofstream ofs(FilePath, ios::trunc);
+		ofs.close();
+
+		if (this->m_EmpArray != NULL)
+		{
+			for (int i = 0; i < this->m_EmpNum; i++)
+			{
+				if (this->m_EmpArray[i] != NULL)
+				{
+					delete this->m_EmpArray[i];
+				}
+			}
+			this->m_EmpNum = 0;
+			delete[] this->m_EmpArray;
+			this->m_EmpArray = NULL;
+		}
+		cout << "Clean Staff File Success." << endl;
+	}
+	else
+	{
+		cout << "Don't Clean Staff File And Back." << endl;
 	}
 }
 
@@ -148,20 +258,14 @@ bool EmployeeManager::Quit()
 }
 
 
-StaffInfo * EmployeeManager::ReadSave()
+void EmployeeManager::ReadSave()
 {
-	struct StaffInfo * staffHead = (struct StaffInfo*)malloc(sizeof(struct StaffInfo));
-	staffHead->staff = NULL;
-	staffHead->next = NULL;
-
-	struct StaffInfo * head = staffHead;
-
-	char savePath[64] = "localSave.save";
-	ifstream ifs(savePath, ios::in);
+	ifstream ifs;//(savePath, ios::in);
+	ifs.open(FilePath, ios::in);
 	if (!ifs.is_open())
 	{
-		cout << "File " << savePath << " Open Failed." << endl;
-		return staffHead;
+		cout << "File " << FilePath << " Open Failed." << endl;
+		return;
 	}
 
 	while (!ifs.eof() && ifs.peek() != EOF)
@@ -175,7 +279,7 @@ StaffInfo * EmployeeManager::ReadSave()
 		rsize_t strmax = sizeof strc;
 		char *next_token;
 		token = strtok_s(strc, delim, &next_token);
-		string res[2] = { "0" };
+		string res[3] = { "0" };
 		int index = 0;
 		while (token)
 		{
@@ -186,51 +290,59 @@ StaffInfo * EmployeeManager::ReadSave()
 		}
 		if (res[0] != "0")
 		{
-			struct StaffInfo * staff = (struct StaffInfo*)malloc(sizeof(struct StaffInfo));
-			int id = stoi(res[1].c_str());
-			string name = res[0];
-			Employee * employee = new BossEmployee(id, name);
-			staff->staff = employee;
-			staff->next = NULL;
-			staffHead->next = staff;
-			staffHead = staffHead->next;
+			int func = stoi(res[0].c_str());
+			int id = stoi(res[2].c_str());
+			string name = res[1];
+			Employee * employee = new BossEmployee(func, id, name);
+
+			AddStaffToArray(employee);
 		}
 	}
 	ifs.close();
-	return head;
 }
 
-void EmployeeManager::WriteSave(const StaffInfo * head, const bool append)
+void EmployeeManager::WriteSave(const bool append)
 {
-	char savePath[64] = "localSave.save";
+	if (this->m_EmpNum <= 0)return;
+	int index = 0;
 	ofstream ofs;
 	if (append)
 	{
-		ofs.open(savePath, ios::out | ios::app);
+		ofs.open(FilePath, ios::out | ios::app);
+		index = this->m_EmpNum - 1;
 	}
 	else
 	{
-		ofs.open(savePath, ios::out);
+		ofs.open(FilePath, ios::out);
+		index = 0;
 	}
 	if (!ofs.is_open())
 	{
 		return;
 	}
-	while (head != NULL)
+	for (int i = index; i < this->m_EmpNum; i++)
 	{
-		if (head->staff != NULL)
-		{
-			string msg = head->staff->GetInfo();
-			ofs << msg << endl;
-		}
-		head = head->next;
+		Employee* employee = this->m_EmpArray[i];
+		string msg = employee->GetInfo();
+		ofs << msg << endl;
 	}
-
 	ofs.close();
 }
 
 
 EmployeeManager::~EmployeeManager()
 {
-
+	if (this->m_EmpArray != NULL)
+	{
+		for (int i = 0; i < this->m_EmpNum; i++)
+		{
+			if (this->m_EmpArray[i] != NULL)
+			{
+				delete this->m_EmpArray[i];
+			}
+		}
+		this->m_EmpNum = 0;
+		delete[] this->m_EmpArray;
+		this->m_EmpArray = NULL;
+	}
 }

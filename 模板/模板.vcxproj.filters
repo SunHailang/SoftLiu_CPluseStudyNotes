@@ -15,33 +15,20 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Main.cpp">
+    <ClCompile Include="函数模板.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Employee.cpp">
+    <ClCompile Include="类模板.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="BossEmployee.cpp">
+    <ClCompile Include="类模板与函数模板的区别.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="EmployeeManager.cpp">
+    <ClCompile Include="类模板中成员函数创建时机.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Employee.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="BossEmployee.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="EmployeeManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="localSave.save">
-      <Filter>Resource Files</Filter>
-    </Text>
+    <ClCompile Include="类模板对象做函数参数.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
