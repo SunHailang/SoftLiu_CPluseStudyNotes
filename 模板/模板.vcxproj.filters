@@ -30,5 +30,8 @@
     <ClCompile Include="类模板对象做函数参数.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="类模板与继承.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

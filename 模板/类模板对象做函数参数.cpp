@@ -16,7 +16,7 @@ public:
 
 	void ShowPerson()
 	{
-		cout << "Name: " << this->m_Name << " , Age: " << this->m_Age << endl;
+		cout << "Name: " << this->m_Name << "\tAge: " << this->m_Age << endl;
 	}
 
 public:
@@ -24,7 +24,7 @@ public:
 	T2 m_Age;
 };
 
-
+// 指定传入类型
 void printPerson01(Person<string, int> &p)
 {
 	p.ShowPerson();
@@ -34,16 +34,24 @@ template<class T1, class T2>
 void printPerson02(Person<T1, T2> &p)
 {
 	p.ShowPerson();
-	cout << "T1:" << typeid(T1).name() << endl;
-	cout << "T2:" << typeid(T2).name() << endl;
+	cout << "T1 Type:" << typeid(T1).name() << endl;
+	cout << "T2 Type:" << typeid(T2).name() << endl;
 }
-
-int main()
+// 整个类模板化
+template<class T>
+void printPerson03(T &p)
 {
-	Person<string, int> p1("Tom", 18);
-	//printPerson01(p1);
-	printPerson02(p1);
-
-	system("pause");
-	return 0;
+	p.ShowPerson();
+	cout << "T Type:" << typeid(T).name() << endl;
 }
+
+//int main()
+//{
+//	Person<string, int> p1("Tom", 18);
+//	//printPerson01(p1);
+//	//printPerson02(p1);
+//	printPerson03(p1);
+//
+//	system("pause");
+//	return 0;
+//}
