@@ -17,6 +17,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "职工管理系统", "职�
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "模板", "模板\模板.vcxproj", "{CC401EC3-CCB9-4BC6-9B16-E3A687602964}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "STL初识", "STL初识\STL初识.vcxproj", "{F234E02E-B704-4168-95BA-A7F9486CD0A1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -80,6 +82,14 @@ Global
 		{CC401EC3-CCB9-4BC6-9B16-E3A687602964}.Release|x64.Build.0 = Release|x64
 		{CC401EC3-CCB9-4BC6-9B16-E3A687602964}.Release|x86.ActiveCfg = Release|Win32
 		{CC401EC3-CCB9-4BC6-9B16-E3A687602964}.Release|x86.Build.0 = Release|Win32
+		{F234E02E-B704-4168-95BA-A7F9486CD0A1}.Debug|x64.ActiveCfg = Debug|x64
+		{F234E02E-B704-4168-95BA-A7F9486CD0A1}.Debug|x64.Build.0 = Debug|x64
+		{F234E02E-B704-4168-95BA-A7F9486CD0A1}.Debug|x86.ActiveCfg = Debug|Win32
+		{F234E02E-B704-4168-95BA-A7F9486CD0A1}.Debug|x86.Build.0 = Debug|Win32
+		{F234E02E-B704-4168-95BA-A7F9486CD0A1}.Release|x64.ActiveCfg = Release|x64
+		{F234E02E-B704-4168-95BA-A7F9486CD0A1}.Release|x64.Build.0 = Release|x64
+		{F234E02E-B704-4168-95BA-A7F9486CD0A1}.Release|x86.ActiveCfg = Release|Win32
+		{F234E02E-B704-4168-95BA-A7F9486CD0A1}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

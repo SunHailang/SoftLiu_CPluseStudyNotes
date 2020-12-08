@@ -29,13 +29,13 @@ public:
 	T1 obj;
 };
 
-int main()
-{
-	Son1 s1; // 此时 Base的 T 只能是 int 类型
-
-	Son2<int, char> s2; // 此时 Base 的 T 是 char 类型
-
-
-	system("pause");
-	return 0;
-}
+//int main()
+//{
+//	Son1 s1; // 此时 Base的 T 只能是 int 类型
+//
+//	Son2<int, char> s2; // 此时 Base 的 T 是 char 类型
+//
+//
+//	system("pause");
+//	return 0;
+//}
