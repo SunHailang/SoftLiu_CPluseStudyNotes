@@ -22,6 +22,7 @@
     <ProjectGuid>{32DA331A-43D1-4B23-B018-412BB086A499}</ProjectGuid>
     <RootNamespace>继承</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <ProjectName>02_继承</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

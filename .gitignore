@@ -1,12 +1,14 @@
 #####################
 .vs/
+/08_vector容器/Debug/
 /ClassAndStudy/Debug/
-/STL初识/Debug/
-/Debug/
+/继承/Debug/
 /多态/Debug/
 /文件操作/Debug/
 /模板/Debug/
-/继承/Debug/
+/STL初识/Debug/
+/string容器/Debug/
+/Debug/
 /职工管理系统/Debug/
 /通讯录管理系统/Debug/
 

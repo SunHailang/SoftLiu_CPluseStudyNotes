@@ -5,19 +5,23 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "通讯录管理系统", "通讯录管理系统\通讯录管理系统.vcxproj", "{3BA039A1-8016-4295-A850-A311C77867D0}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ClassAndStudy", "ClassAndStudy\ClassAndStudy.vcxproj", "{BB6D8532-6D8C-45F8-AA2E-D673CE8C9DEA}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "01_ClassAndStudy", "ClassAndStudy\ClassAndStudy.vcxproj", "{BB6D8532-6D8C-45F8-AA2E-D673CE8C9DEA}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "继承", "继承\继承.vcxproj", "{32DA331A-43D1-4B23-B018-412BB086A499}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "02_继承", "继承\继承.vcxproj", "{32DA331A-43D1-4B23-B018-412BB086A499}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "多态", "多态\多态.vcxproj", "{1F3EAD83-64D1-41A8-9B81-DF80BD0A4F57}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "03_多态", "多态\多态.vcxproj", "{1F3EAD83-64D1-41A8-9B81-DF80BD0A4F57}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "文件操作", "文件操作\文件操作.vcxproj", "{B9FE62C0-B776-4642-887E-7FB232DC8B23}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "04_文件操作", "文件操作\文件操作.vcxproj", "{B9FE62C0-B776-4642-887E-7FB232DC8B23}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "职工管理系统", "职工管理系统\职工管理系统.vcxproj", "{250A610D-B6FC-462B-AB6F-FA8C94C5159F}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "模板", "模板\模板.vcxproj", "{CC401EC3-CCB9-4BC6-9B16-E3A687602964}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "05_模板", "模板\模板.vcxproj", "{CC401EC3-CCB9-4BC6-9B16-E3A687602964}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "STL初识", "STL初识\STL初识.vcxproj", "{F234E02E-B704-4168-95BA-A7F9486CD0A1}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "06_STL初识", "STL初识\STL初识.vcxproj", "{F234E02E-B704-4168-95BA-A7F9486CD0A1}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "07_string容器", "string容器\string容器.vcxproj", "{17E60FC2-2C45-441B-BBD0-5B311E2EE4CC}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "08_vector容器", "08_vector容器\08_vector容器.vcxproj", "{75601FF7-F177-4F5E-90B8-E5AEE68E9A01}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -90,6 +94,22 @@ Global
 		{F234E02E-B704-4168-95BA-A7F9486CD0A1}.Release|x64.Build.0 = Release|x64
 		{F234E02E-B704-4168-95BA-A7F9486CD0A1}.Release|x86.ActiveCfg = Release|Win32
 		{F234E02E-B704-4168-95BA-A7F9486CD0A1}.Release|x86.Build.0 = Release|Win32
+		{17E60FC2-2C45-441B-BBD0-5B311E2EE4CC}.Debug|x64.ActiveCfg = Debug|x64
+		{17E60FC2-2C45-441B-BBD0-5B311E2EE4CC}.Debug|x64.Build.0 = Debug|x64
+		{17E60FC2-2C45-441B-BBD0-5B311E2EE4CC}.Debug|x86.ActiveCfg = Debug|Win32
+		{17E60FC2-2C45-441B-BBD0-5B311E2EE4CC}.Debug|x86.Build.0 = Debug|Win32
+		{17E60FC2-2C45-441B-BBD0-5B311E2EE4CC}.Release|x64.ActiveCfg = Release|x64
+		{17E60FC2-2C45-441B-BBD0-5B311E2EE4CC}.Release|x64.Build.0 = Release|x64
+		{17E60FC2-2C45-441B-BBD0-5B311E2EE4CC}.Release|x86.ActiveCfg = Release|Win32
+		{17E60FC2-2C45-441B-BBD0-5B311E2EE4CC}.Release|x86.Build.0 = Release|Win32
+		{75601FF7-F177-4F5E-90B8-E5AEE68E9A01}.Debug|x64.ActiveCfg = Debug|x64
+		{75601FF7-F177-4F5E-90B8-E5AEE68E9A01}.Debug|x64.Build.0 = Debug|x64
+		{75601FF7-F177-4F5E-90B8-E5AEE68E9A01}.Debug|x86.ActiveCfg = Debug|Win32
+		{75601FF7-F177-4F5E-90B8-E5AEE68E9A01}.Debug|x86.Build.0 = Debug|Win32
+		{75601FF7-F177-4F5E-90B8-E5AEE68E9A01}.Release|x64.ActiveCfg = Release|x64
+		{75601FF7-F177-4F5E-90B8-E5AEE68E9A01}.Release|x64.Build.0 = Release|x64
+		{75601FF7-F177-4F5E-90B8-E5AEE68E9A01}.Release|x86.ActiveCfg = Release|Win32
+		{75601FF7-F177-4F5E-90B8-E5AEE68E9A01}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
