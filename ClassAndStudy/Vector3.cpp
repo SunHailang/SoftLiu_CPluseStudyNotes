@@ -47,7 +47,7 @@ Vector3& Vector3::Cross(Vector3 & v3)
 
 Vector3& Vector3::ModLength()
 {
-	double mod = sqrt(m_x*m_x + m_y*m_y + m_z*m_z);
+	float mod = sqrt(m_x*m_x + m_y*m_y + m_z*m_z);
 	return Vector3(m_x / mod, m_y / mod, m_z / mod);
 }
 

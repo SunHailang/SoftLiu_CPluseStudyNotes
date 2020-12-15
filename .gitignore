@@ -1,6 +1,12 @@
 #####################
 .vs/
 /08_vector容器/Debug/
+/09_deque容器/Debug/
+/10_stack容器/Debug/
+/11_queue容器/Debug/
+/12_list容器/Debug/
+/13_set和multiset 容器/Debug/
+/14_map和multimap容器/Debug/
 /ClassAndStudy/Debug/
 /继承/Debug/
 /多态/Debug/
