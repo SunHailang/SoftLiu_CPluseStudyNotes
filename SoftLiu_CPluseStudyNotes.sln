@@ -31,9 +31,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "11_queue容器", "11_queue�
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "12_list容器", "12_list容器\12_list容器.vcxproj", "{442E296F-6057-4AC1-B512-B3BBA87C6579}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "13_set和multiset 容器", "13_set和multiset 容器\13_set和multiset 容器.vcxproj", "{BAB37237-2357-4050-B820-599C1FE02A12}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "13_set和multiset容器", "13_set和multiset 容器\13_set和multiset 容器.vcxproj", "{BAB37237-2357-4050-B820-599C1FE02A12}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "14_map和multimap容器", "14_map和multimap容器\14_map和multimap容器.vcxproj", "{91F9F3E1-9C46-44A7-9FB5-F444E6230C2C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "15_STL函数对象", "15_STL函数对象\15_STL函数对象.vcxproj", "{408B4E64-12BA-4E2A-AAFB-F5A7AF6F3F39}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -170,6 +172,14 @@ Global
 		{91F9F3E1-9C46-44A7-9FB5-F444E6230C2C}.Release|x64.Build.0 = Release|x64
 		{91F9F3E1-9C46-44A7-9FB5-F444E6230C2C}.Release|x86.ActiveCfg = Release|Win32
 		{91F9F3E1-9C46-44A7-9FB5-F444E6230C2C}.Release|x86.Build.0 = Release|Win32
+		{408B4E64-12BA-4E2A-AAFB-F5A7AF6F3F39}.Debug|x64.ActiveCfg = Debug|x64
+		{408B4E64-12BA-4E2A-AAFB-F5A7AF6F3F39}.Debug|x64.Build.0 = Debug|x64
+		{408B4E64-12BA-4E2A-AAFB-F5A7AF6F3F39}.Debug|x86.ActiveCfg = Debug|Win32
+		{408B4E64-12BA-4E2A-AAFB-F5A7AF6F3F39}.Debug|x86.Build.0 = Debug|Win32
+		{408B4E64-12BA-4E2A-AAFB-F5A7AF6F3F39}.Release|x64.ActiveCfg = Release|x64
+		{408B4E64-12BA-4E2A-AAFB-F5A7AF6F3F39}.Release|x64.Build.0 = Release|x64
+		{408B4E64-12BA-4E2A-AAFB-F5A7AF6F3F39}.Release|x86.ActiveCfg = Release|Win32
+		{408B4E64-12BA-4E2A-AAFB-F5A7AF6F3F39}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
