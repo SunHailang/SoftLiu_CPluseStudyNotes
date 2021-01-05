@@ -19,8 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{408B4E64-12BA-4E2A-AAFB-F5A7AF6F3F39}</ProjectGuid>
-    <RootNamespace>My15_STL函数对象</RootNamespace>
+    <ProjectGuid>{0B96B116-7709-4384-9124-27524D6BB151}</ProjectGuid>
+    <RootNamespace>My18_常用算术生成算法</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -110,11 +110,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="01_函数对象基本使用.cpp" />
-    <ClCompile Include="02_谓词.cpp" />
-    <ClCompile Include="03_算术仿函数.cpp" />
-    <ClCompile Include="04_关系仿函数.cpp" />
-    <ClCompile Include="05_逻辑仿函数.cpp" />
+    <ClCompile Include="01_accumulate.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

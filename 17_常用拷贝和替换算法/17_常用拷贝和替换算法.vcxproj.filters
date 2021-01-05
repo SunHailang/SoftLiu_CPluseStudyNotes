@@ -15,19 +15,16 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="01_函数对象基本使用.cpp">
+    <ClCompile Include="01_copy.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="02_谓词.cpp">
+    <ClCompile Include="02_replace.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="03_算术仿函数.cpp">
+    <ClCompile Include="03_replace_if.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="04_关系仿函数.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="05_逻辑仿函数.cpp">
+    <ClCompile Include="04_swap.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

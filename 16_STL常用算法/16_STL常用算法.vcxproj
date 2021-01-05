@@ -19,8 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{408B4E64-12BA-4E2A-AAFB-F5A7AF6F3F39}</ProjectGuid>
-    <RootNamespace>My15_STL函数对象</RootNamespace>
+    <ProjectGuid>{F090E85F-1ED3-4D06-8E4C-921BEAB11FC4}</ProjectGuid>
+    <RootNamespace>My16_STL常用算法</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -110,11 +110,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="01_函数对象基本使用.cpp" />
-    <ClCompile Include="02_谓词.cpp" />
-    <ClCompile Include="03_算术仿函数.cpp" />
-    <ClCompile Include="04_关系仿函数.cpp" />
-    <ClCompile Include="05_逻辑仿函数.cpp" />
+    <ClCompile Include="01_常用遍历算法.cpp" />
+    <ClCompile Include="02_常用查找算法_find.cpp" />
+    <ClCompile Include="03_常用查找算法_find_if.cpp" />
+    <ClCompile Include="04_常用查找算法_adjacent_find.cpp" />
+    <ClCompile Include="05_常用查找算法_binary_search.cpp" />
+    <ClCompile Include="06_常用查找算法_count.cpp" />
+    <ClCompile Include="07_常用查找算法_count_if.cpp" />
+    <ClCompile Include="08_常用排序算法_sort.cpp" />
+    <ClCompile Include="09_常用排序算法_random_shuffle.cpp" />
+    <ClCompile Include="10_常用排序算法_merge.cpp" />
+    <ClCompile Include="11_常用排序算法_reverse.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
