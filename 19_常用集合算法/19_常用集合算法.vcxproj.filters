@@ -15,10 +15,13 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="01_accumulate.cpp">
+    <ClCompile Include="01_set_intersection.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="02_fill.cpp">
+    <ClCompile Include="02_set_union.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="03_set_difference.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
