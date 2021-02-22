@@ -3,6 +3,13 @@ using namespace std;
 #include <vector>
 #include <algorithm>
 
+// print 函数
+void PrintVector(const void *value)
+{
+
+}
+
+
 // 常用集合算法 set_difference
 int main()
 {
