@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #ifndef __02_BINARYTREE_H_
 #define __02_BINARYTREE_H_
 
@@ -23,7 +23,56 @@ TreeNode* CreateRoot(int value)
 	return head;
 }
 
+void AddNode(TreeNode* head, int value)
+{
+	TreeNode* temp = head;
+	if (head == NULL)
+	{
+		return;
+	}
+	if (head->value < value)
+	{
+		if (head->right != NULL)
+		{
+			AddNode(head->right, value);
+		}
+		else
+		{
+			TreeNode* pnew = (TreeNode*)malloc(sizeof(TreeNode));
+			pnew->value = value;
+			pnew->left = NULL;
+			pnew->right = NULL;
+			head->right = pnew;
+		}
+	}
+	else
+	{
+		if (head->left != NULL)
+		{
+			AddNode(head->left, value);
+		}
+		else
+		{
+			TreeNode* pnew = (TreeNode*)malloc(sizeof(TreeNode));
+			pnew->value = value;
+			pnew->left = NULL;
+			pnew->right = NULL;
+			head->left = pnew;
+		}
+	}
+}
 
+
+// 层序遍历  
+void SequenceTraversal(TreeNode* head)
+{
+	TreeNode* temp = head;
+
+	while (head != NULL)
+	{
+		//int 
+	}
+}
 
 
 #endif // !__BINARYTREE_H_

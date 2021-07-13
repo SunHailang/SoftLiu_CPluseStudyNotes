@@ -139,8 +139,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="01_链表.cpp" />
+    <ClCompile Include="01_链表.hpp" />
     <ClCompile Include="Application.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="02_BinaryTree.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
