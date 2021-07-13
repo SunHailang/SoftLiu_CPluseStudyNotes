@@ -4,28 +4,23 @@
 
 
 #include <stdlib.h>
+#include "Typedef.h"
 
 
-typedef struct _TreeNode
+
+
+NodeTree* CreateRoot(int value)
 {
-	int value;
-	struct _TreeNode* left;
-	struct _TreeNode* right;
-}TreeNode;
-
-
-TreeNode* CreateRoot(int value)
-{
-	TreeNode* head = (TreeNode*)malloc(sizeof(TreeNode));
+	NodeTree* head = (NodeTree*)malloc(sizeof(NodeTree));
 	head->value = value;
 	head->left = NULL;
 	head->right = NULL;
 	return head;
 }
 
-void AddNode(TreeNode* head, int value)
+void AddNode(NodeTree* head, int value)
 {
-	TreeNode* temp = head;
+	NodeTree* temp = head;
 	if (head == NULL)
 	{
 		return;
@@ -38,7 +33,7 @@ void AddNode(TreeNode* head, int value)
 		}
 		else
 		{
-			TreeNode* pnew = (TreeNode*)malloc(sizeof(TreeNode));
+			NodeTree* pnew = (NodeTree*)malloc(sizeof(NodeTree));
 			pnew->value = value;
 			pnew->left = NULL;
 			pnew->right = NULL;
@@ -53,7 +48,7 @@ void AddNode(TreeNode* head, int value)
 		}
 		else
 		{
-			TreeNode* pnew = (TreeNode*)malloc(sizeof(TreeNode));
+			NodeTree* pnew = (NodeTree*)malloc(sizeof(NodeTree));
 			pnew->value = value;
 			pnew->left = NULL;
 			pnew->right = NULL;
@@ -64,9 +59,9 @@ void AddNode(TreeNode* head, int value)
 
 
 // 层序遍历  
-void SequenceTraversal(TreeNode* head)
+void SequenceTraversal(NodeTree* head)
 {
-	TreeNode* temp = head;
+	NodeTree* temp = head;
 
 	while (head != NULL)
 	{

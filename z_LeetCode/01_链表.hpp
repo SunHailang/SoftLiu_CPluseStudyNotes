@@ -5,22 +5,19 @@
 
 
 #include <stdlib.h>
-
-
-typedef struct _NodeLink
-{
-	int value;
-	struct _NodeLink* next;
-}NodeLink;
+#include "Typedef.h"
 
 // 创建一个链表 第一个元素为 value
 NodeLink* CreatLink(int value)
 {
 	NodeLink* temp = (NodeLink*)malloc(sizeof(NodeLink));
-	temp->value = value;
-	temp->next = NULL;
+	if (temp)
+	{
+		temp->value = value;
+		temp->next = NULL;
+	}
 	NodeLink* head = (NodeLink*)malloc(sizeof(NodeLink));
-	head->next = temp;
+	if (head) head->next = temp;
 	return head;
 }
 // 往链表的尾部插入一个 value 数据
@@ -30,8 +27,11 @@ void AddLink(NodeLink* head, int value)
 	while (temp->next != NULL) temp = temp->next;
 
 	NodeLink* pNew = (NodeLink*)malloc(sizeof(NodeLink));
-	pNew->value = value;
-	pNew->next = NULL;
+	if (pNew) 
+	{
+		pNew->value = value;
+		pNew->next = NULL;
+	}
 	temp->next = pNew;
 }
 // 链表的反转
@@ -79,8 +79,11 @@ int LinkInster(NodeLink* head, int posValue, int value)
 		if (temp->value == posValue)
 		{
 			NodeLink* pnew = (NodeLink*)malloc(sizeof(NodeLink));
-			pnew->value = value;
-			pnew->next = temp->next;
+			if (pnew)
+			{
+				pnew->value = value;
+				pnew->next = temp->next;
+			}
 			temp->next = pnew;
 			return 1;
 		}

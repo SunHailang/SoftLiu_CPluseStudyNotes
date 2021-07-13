@@ -26,5 +26,11 @@
     <ClInclude Include="02_BinaryTree.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Queue.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Typedef.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

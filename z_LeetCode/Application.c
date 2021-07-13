@@ -17,6 +17,7 @@ int main(int arvc, char** arvg)
 	while (temp->next != NULL)
 	{
 		temp = temp->next;
+
 		printf("%d, ", temp->value);
 	}
 	printf("\n-----------------------\n");
