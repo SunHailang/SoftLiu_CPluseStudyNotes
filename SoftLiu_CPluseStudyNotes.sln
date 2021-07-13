@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31313.79
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "通讯录管理系统", "通讯录管理系统\通讯录管理系统.vcxproj", "{3BA039A1-8016-4295-A850-A311C77867D0}"
 EndProject
@@ -46,6 +46,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "19_常用集合算法", "19_常用集合算法\19_常用集合算法.vcxproj", "{FC9ABF2F-AE1F-4F11-845C-50DB233CD766}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "20_刷题", "20_刷题\20_刷题.vcxproj", "{273D757B-BCCE-4588-A2C0-E5C9050CBBE8}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "z_LeetCode", "z_LeetCode\z_LeetCode.vcxproj", "{9705BE23-EF52-4D64-BE5A-C70BF677B77D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -230,8 +232,19 @@ Global
 		{273D757B-BCCE-4588-A2C0-E5C9050CBBE8}.Release|x64.Build.0 = Release|x64
 		{273D757B-BCCE-4588-A2C0-E5C9050CBBE8}.Release|x86.ActiveCfg = Release|Win32
 		{273D757B-BCCE-4588-A2C0-E5C9050CBBE8}.Release|x86.Build.0 = Release|Win32
+		{9705BE23-EF52-4D64-BE5A-C70BF677B77D}.Debug|x64.ActiveCfg = Debug|x64
+		{9705BE23-EF52-4D64-BE5A-C70BF677B77D}.Debug|x64.Build.0 = Debug|x64
+		{9705BE23-EF52-4D64-BE5A-C70BF677B77D}.Debug|x86.ActiveCfg = Debug|Win32
+		{9705BE23-EF52-4D64-BE5A-C70BF677B77D}.Debug|x86.Build.0 = Debug|Win32
+		{9705BE23-EF52-4D64-BE5A-C70BF677B77D}.Release|x64.ActiveCfg = Release|x64
+		{9705BE23-EF52-4D64-BE5A-C70BF677B77D}.Release|x64.Build.0 = Release|x64
+		{9705BE23-EF52-4D64-BE5A-C70BF677B77D}.Release|x86.ActiveCfg = Release|Win32
+		{9705BE23-EF52-4D64-BE5A-C70BF677B77D}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {70D26126-450D-4749-80D4-7E54C3C6E039}
 	EndGlobalSection
 EndGlobal
