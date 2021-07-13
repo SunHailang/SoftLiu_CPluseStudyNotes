@@ -13,7 +13,7 @@ typedef struct _NodeLink
 	struct _NodeLink* next;
 }NodeLink;
 
-// 创建一个链表 第一次元素为 value
+// 创建一个链表 第一个元素为 value
 NodeLink* CreatLink(int value)
 {
 	NodeLink* temp = (NodeLink*)malloc(sizeof(NodeLink));
@@ -51,6 +51,7 @@ NodeLink* LinkReverse(NodeLink* head)
 }
 
 // 1 success , 0 failed
+// 删除链表指定的元素，如果存在则删除 返回1， 否则返回0
 int LinkDelete(NodeLink* head, int value)
 {
 	NodeLink* temp = head;
@@ -68,13 +69,14 @@ int LinkDelete(NodeLink* head, int value)
 	return 0;
 }
 // 1:success,  0:failed
-// 在 pos 后面 添加 value
-int LinkInster(NodeLink* head, int pos, int value)
+// 在 posValue 后面 添加 新节点 value
+// 如果 posValue 存在则插入，否则不插入
+int LinkInster(NodeLink* head, int posValue, int value)
 {
 	NodeLink* temp = head->next;
 	while (temp != NULL)
 	{
-		if (temp->value == pos)
+		if (temp->value == posValue)
 		{
 			NodeLink* pnew = (NodeLink*)malloc(sizeof(NodeLink));
 			pnew->value = value;
