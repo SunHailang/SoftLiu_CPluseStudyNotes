@@ -17,5 +17,12 @@ typedef struct _NodeTree
 	struct _NodeTree* right;
 }NodeTree;
 
+typedef struct _NodeQueue
+{
+	struct _NodeTree* value;
+	struct _NodeQueue* front;
+	struct _NodeQueue* next;
+}NodeQueue;
+
 #endif // !__TYPEDEF_H_
 

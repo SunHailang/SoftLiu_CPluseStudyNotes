@@ -2,41 +2,45 @@
 #ifndef __02_BINARYTREE_H_
 #define __02_BINARYTREE_H_
 
-
+#include <stdio.h>
 #include <stdlib.h>
 #include "Typedef.h"
+#include "Queue.hpp"
 
 
 
 
-NodeTree* CreateRoot(int value)
+NodeTree* NodeTreeCreateRoot(int value)
 {
 	NodeTree* head = (NodeTree*)malloc(sizeof(NodeTree));
-	head->value = value;
-	head->left = NULL;
-	head->right = NULL;
+	if (head)
+	{
+		head->value = value;
+		head->left = NULL;
+		head->right = NULL;
+	}
 	return head;
 }
 
-void AddNode(NodeTree* head, int value)
+void NodeTreeAdd(NodeTree* head, int value)
 {
 	NodeTree* temp = head;
-	if (head == NULL)
-	{
-		return;
-	}
+	if (head == NULL) return;
 	if (head->value < value)
 	{
 		if (head->right != NULL)
 		{
-			AddNode(head->right, value);
+			NodeTreeAdd(head->right, value);
 		}
 		else
 		{
 			NodeTree* pnew = (NodeTree*)malloc(sizeof(NodeTree));
-			pnew->value = value;
-			pnew->left = NULL;
-			pnew->right = NULL;
+			if (pnew)
+			{
+				pnew->value = value;
+				pnew->left = NULL;
+				pnew->right = NULL;
+			}
 			head->right = pnew;
 		}
 	}
@@ -44,28 +48,75 @@ void AddNode(NodeTree* head, int value)
 	{
 		if (head->left != NULL)
 		{
-			AddNode(head->left, value);
+			NodeTreeAdd(head->left, value);
 		}
 		else
 		{
 			NodeTree* pnew = (NodeTree*)malloc(sizeof(NodeTree));
-			pnew->value = value;
-			pnew->left = NULL;
-			pnew->right = NULL;
+			if (pnew)
+			{
+				pnew->value = value;
+				pnew->left = NULL;
+				pnew->right = NULL;
+			}
 			head->left = pnew;
 		}
 	}
 }
 
 
-// 层序遍历  
-void SequenceTraversal(NodeTree* head)
+int height(NodeTree* root)
 {
-	NodeTree* temp = head;
+	if (root == NULL) return 0;
 
-	while (head != NULL)
+	int leftHight = height(root->left);
+	int rightHight = height(root->right);
+
+	if (leftHight == -1 || rightHight == -1 || abs(leftHight - rightHight) > 1) return -1;
+
+	return max(leftHight, rightHight) + 1;
+}
+// 判断一颗树是否为 平衡二叉树
+// 1：是， 0：不是
+int NodeTreeIsBanced(NodeTree* head)
+{
+	if (head == NULL) return 1;
+
+	return height(head) >= 0;
+}
+
+// 层序遍历  
+void NodeTreeSequenceTraversal(NodeTree* head)
+{
+	if (head == NULL) return;
+	NodeTree* temp = head;
+	NodeQueue* queue = InitQueue();
+	int queueLength = 0;
+	PushQueue(queue, temp);
+	queueLength++;
+	int nextLength = 0;
+	NodeTree* p = NULL;
+
+	while ((p = PopQueue(queue)) != NULL)
 	{
-		//int 
+		queueLength--;
+		printf("%d, ", p->value);
+		if (p->left)
+		{
+			PushQueue(queue, p->left);
+			nextLength++;
+		}
+		if (p->right)
+		{
+			PushQueue(queue, p->right);
+			nextLength++;
+		}
+		if (queueLength == 0)
+		{
+			queueLength = nextLength;
+			nextLength = 0;
+			printf("\n");
+		}
 	}
 }
 

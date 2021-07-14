@@ -1,12 +1,10 @@
 ﻿#include <stdio.h>
 
 #include "01_链表.hpp";
+#include "02_BinaryTree.hpp"
 
-
-int main(int arvc, char** arvg)
+void TestNodeLink()
 {
-	printf("----------- Hello World -----------\n");
-
 	NodeLink* head = NULL;
 	head = CreatLink(5);
 	AddLink(head, 8);
@@ -52,12 +50,30 @@ int main(int arvc, char** arvg)
 
 
 
-	while (per !=NULL)
+	while (per != NULL)
 	{
 		temp = per->next;
 		free(per);
 		per = temp;
 	}
+}
+
+void TestNodeTree()
+{
+	NodeTree* tree = NodeTreeCreateRoot(2);
+	NodeTreeAdd(tree, 3);
+	NodeTreeAdd(tree, 1);
+	NodeTreeAdd(tree, 5);
+	NodeTreeAdd(tree, 4);
+
+	NodeTreeSequenceTraversal(tree);
+}
+
+int main(int arvc, char** arvg)
+{
+	printf("----------- Hello World -----------\n");
+
+	TestNodeTree();
 
 	printf("\nAny Key Continue...");
 	getchar();
